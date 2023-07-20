@@ -88,6 +88,9 @@
                                     @if(session('loginfalse'))
                                         <h6 align="center" style="color: red">{{session('loginfalse')}}</h6>
                                     @endif
+                                    @if(session('accessdeny'))
+                                        <h6 align="center" style="color: red">{{session('accessdeny')}}</h6>
+                                    @endif
                                 </form>
                                 <!-- login form end -->
                                 <p class="uk-heading-line"><span>{{__('Hoặc đăng nhập với')}}</span></p>

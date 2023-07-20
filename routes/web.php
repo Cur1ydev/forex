@@ -6,6 +6,9 @@ use App\Http\Controllers\Client\PageController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('error', function () {
+    abort(500);
+})->name('error');
 Route::get('/', [PageController::class, 'home'])
     ->name('home');
 Route::get('/changeLocale', [LanguageController::class, 'handle'])
@@ -44,8 +49,24 @@ Route::prefix('/google')->name('google.')->group(function () {
 Route::get('/blog/{slug}', [PageController::class, 'blog'])
     ->name('blog');
 
-Route::prefix('/admin')->name('admin.')->group(function (){
-    Route::get('/',function (){
-        return 'Đây là trang admin';
-    })->name('home');
+Route::prefix('/admin')->middleware('loginAdmin')->name('admin.')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])
+        ->name('home');
+    Route::prefix('user')->name('user.')->group(function () {
+        Route::get('/', [UserController::class, 'list'])
+            ->name('list');
+        Route::get('/delete-{id}', [UserController::class, 'delete'])
+            ->name('delete');
+    });
+    Route::prefix('page')->name('blog.')->group(function () {
+        Route::get('/list', [BlogController::class, 'list'])
+            ->name('list');
+        Route::match(['get', 'post'], 'add', [BlogController::class, 'create'])
+            ->name('create');
+        Route::match(['get', 'post'], 'update/{id}', [BlogController::class, 'update'])
+            ->name('update');
+        Route::get('/delete', [BlogController::class, 'delete'])
+            ->name('delete');
+    });
 });
+

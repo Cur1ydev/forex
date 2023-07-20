@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Error505;
+use App\Http\Middleware\HandleLoginAdmin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -36,7 +38,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\Locale::class
+            \App\Http\Middleware\Locale::class,
+            Error505::class,
         ],
 
         'api' => [
@@ -65,5 +68,6 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'loginAdmin' => HandleLoginAdmin::class,
     ];
 }
