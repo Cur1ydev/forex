@@ -13,4 +13,10 @@ interface BlogInterface
     public function update($id, array $data);
 
     public function delete($id);
+
+    public function trash();
+
+    public function onlyTrash($id);
+
+    public function allTrash();
 }

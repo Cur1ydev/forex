@@ -38,7 +38,7 @@
                                 <div class="uk-width-expand@m">
                                     <h3 class="uk-margin-remove-bottom">{{__('Forex Academy')}}</h3>
                                     <p class="uk-margin-small-top">{{__('Forex Vietnam với mong muốn mang đến một nguồn kiến thức luôn được cập nhật liên tục và chính xác nhất đến học viên.')}}</p>
-                                    <a class="uk-button uk-button-primary uk-border-rounded" href="#">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                                    <a class="uk-button uk-button-primary uk-border-rounded" href="{{route('form-investor')}}">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                                 </div>
                                 <div class="uk-width-auto@m uk-visible@m">
                                     <div class="in-icon-wrapper transparent uk-margin-top">
@@ -74,7 +74,7 @@
                                 </td>
                                 <td>{{__('Khóa học Forex Begin với kiến thức nền tảng giúp người mới hiểu về Khái niệm ngoại hối. Học về các loại hàng hoá và thời điểm tốt để giao dịch Forex hiệu quả.')}}</td>
                                 <td class="uk-width-1-5@m uk-text-right@m">
-                                    <a href="{{route('register-course')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                                    <a href="{{route('form-investor')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -92,7 +92,7 @@
                                 </td>
                                 <td>{{__('Học phân tích kỹ thuật là một chặng đường dài, mang lại nhiều cảm hứng cho các nhà đầu tư. Việc để cảm xúc dẫn dắt trong khóa học sẽ vô cùng nguy hiểm cho người mới.')}}</td>
                                 <td class="uk-width-1-5@m uk-text-right@m">
-                                    <a href="{{route('register-course')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                                    <a href="{{route('form-investor')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -110,7 +110,7 @@
                                 </td>
                                 <td>{{__('Phân tích cơ bản là một thành phần không thể thiếu của một Khóa học Forex dành cho người mới. Nếu chỉ biết nhìn biểu đồ mà không thể giải thích lý do gây ra các biến động trên biểu đồ, thì không khác nào chúng ta Ăn cơm mà không hiểu Hạt Gạo được trồng cấy thế nào.')}}</td>
                                 <td class="uk-width-1-5@m uk-text-right@m">
-                                    <a href="{{route('register-course')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                                    <a href="{{route('form-investor')}}" class="uk-button uk-button-text">{{__('Tham gia khóa học')}}<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                                 </td>
                             </tr>
                             </tbody>

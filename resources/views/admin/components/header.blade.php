@@ -4,7 +4,7 @@
             <div class="d-flex">
                 <!-- LOGO -->
                 <div class="navbar-brand-box horizontal-logo">
-                    <a href="index-2.html" class="logo logo-dark">
+                    <a href="#" class="logo logo-dark">
                         <span class="logo-sm">
                             <img src="{{asset('images/logo-forex-nen-toi.png')}}" alt="" width="150px">
                         </span>
@@ -13,7 +13,7 @@
                         </span>
                     </a>
 
-                    <a href="index-2.html" class="logo logo-light">
+                    <a href="#" class="logo logo-light">
                         <span class="logo-sm">
                             <img src="{{asset('images/logo-forex-nen-sang.png')}}" alt="" width="150px">
                         </span>
@@ -49,9 +49,9 @@
                             </div>
 
                             <div class="dropdown-item bg-transparent text-wrap">
-                                <a href="index-2.html" class="btn btn-soft-secondary btn-sm rounded-pill">how to setup
+                                <a href="#" class="btn btn-soft-secondary btn-sm rounded-pill">how to setup
                                     <i class="mdi mdi-magnify ms-1"></i></a>
-                                <a href="index-2.html" class="btn btn-soft-secondary btn-sm rounded-pill">buttons <i
+                                <a href="#" class="btn btn-soft-secondary btn-sm rounded-pill">buttons <i
                                         class="mdi mdi-magnify ms-1"></i></a>
                             </div>
                             <!-- item-->
@@ -120,7 +120,7 @@
                         </div>
 
                         <div class="text-center pt-3 pb-1">
-                            <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results <i
+                            <a href="#" class="btn btn-primary btn-sm">View All Results <i
                                     class="ri-arrow-right-line ms-1"></i></a>
                         </div>
                     </div>
@@ -484,29 +484,29 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
                         <h6 class="dropdown-header">Xin chào {{auth()->user()->name}}!</h6>
-                        <a class="dropdown-item" href="pages-profile.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Profile</span></a>
-                        <a class="dropdown-item" href="apps-chat.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Messages</span></a>
-                        <a class="dropdown-item" href="apps-tasks-kanban.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Taskboard</span></a>
-                        <a class="dropdown-item" href="pages-faqs.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Help</span></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="pages-profile.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Balance : <b>$5971.67</b></span></a>
-                        <a class="dropdown-item" href="pages-profile-settings.html"><span
+                        <a class="dropdown-item" href="#"><span
                                 class="badge bg-success-subtle text-success mt-1 float-end">New</span><i
                                 class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Settings</span></a>
-                        <a class="dropdown-item" href="auth-lockscreen-basic.html"><i
+                        <a class="dropdown-item" href="#"><i
                                 class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
-                        <a class="dropdown-item" href="auth-logout-basic.html"><i
+                        <a class="dropdown-item" href="{{route('log-out')}}"><i
                                 class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle" data-key="t-logout">Logout</span></a>
                     </div>
@@ -563,23 +563,32 @@
             <div id="two-column-menu">
             </div>
             <ul class="navbar-nav" id="navbar-nav">
-                <li class="menu-title"><span data-key="t-menu">Trang chủ</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{route('admin.home')}}">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Home</span>
+                    <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarAuth">
+                        <i class="ri-dashboard-2-line"></i>
                     </a>
+                    <div class="collapse menu-dropdown" id="sidebarDashboards">
+                        <ul class="nav nav-sm flex-column">
+                            <li>Trang chủ</li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.home')}}" class="nav-link" data-key="t-starter">Trang chủ</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages">Các Trang Khác</span></li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button"
+                    <a class="nav-link menu-link" href="#nguoidung" data-bs-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarAuth">
                         <i class="ri-account-circle-line"></i> <span
                             data-key="t-authentication">Quản lý người dùng</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarAuth">
+                    <div class="collapse menu-dropdown" id="nguoidung">
                         <ul class="nav nav-sm flex-column">
+                            <li>Quản lý người dùng</li>
                             <li class="nav-item">
                                 <a href="{{route('admin.user.list')}}" class="nav-link" data-key="t-starter">Danh sách</a>
                             </li>
@@ -587,14 +596,17 @@
                     </div>
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarPages" data-bs-toggle="collapse" role="button"
+                    <a class="nav-link menu-link" href="#page" data-bs-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarPages">
                         <i class="ri-pages-line"></i> <span data-key="t-pages">Quản lý page</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarPages">
+                    <div class="collapse menu-dropdown" id="page">
                         <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">Quản lý page</li>
                             <li class="nav-item">
+
                                 <a href="{{route('admin.blog.list')}}" class="nav-link" data-key="t-starter">Danh sách</a>
                             </li>
                             <li class="nav-item">
@@ -605,18 +617,19 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarAdvanceUI" data-bs-toggle="collapse" role="button"
+                    <a class="nav-link menu-link" href="#danhmuc" data-bs-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarAdvanceUI">
                         <i class="ri-stack-line"></i> <span data-key="t-advance-ui">Quản lý danh mục</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarAdvanceUI">
+                    <div class="collapse menu-dropdown" id="danhmuc">
                         <ul class="nav nav-sm flex-column">
+                            <li>Quản lý danh mục</li>
                             <li class="nav-item">
-                                <a href="advance-ui-sweetalerts.html" class="nav-link" data-key="t-sweet-alerts">Danh
+                                <a href="{{route('admin.category.list')}}" class="nav-link" data-key="t-sweet-alerts">Danh
                                     sách</a>
                             </li>
                             <li class="nav-item">
-                                <a href="advance-ui-nestable.html" class="nav-link" data-key="t-nestable-list">Thêm danh
+                                <a href="{{route('admin.category.create')}}" class="nav-link" data-key="t-nestable-list">Thêm danh
                                     mục</a>
                             </li>
                         </ul>
@@ -624,17 +637,63 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarForms" data-bs-toggle="collapse" role="button"
+                    <a class="nav-link menu-link" href="#binhluan" data-bs-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarForms">
                         <i class="ri-file-list-3-line"></i> <span data-key="t-forms">Quản lý bình luận</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarForms">
+                    <div class="collapse menu-dropdown" id="binhluan">
                         <ul class="nav nav-sm flex-column">
+                            <li>Quản lý bình luận</li>
                             <li class="nav-item">
-                                <a href="forms-elements.html" class="nav-link" data-key="t-basic-elements">Danh sách</a>
+                                <a href="{{route('admin.comment.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#dautu" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarForms">
+                        <i class="ri-pencil-ruler-2-line"></i> <span data-key="t-forms">Quản lý tùy chọn đầu tư</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="dautu">
+                        <ul class="nav nav-sm flex-column">
+                            <li>Quản lý tùy chọn đầu tư</li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.optionTrade.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
                             </li>
                             <li class="nav-item">
-                                <a href="forms-select.html" class="nav-link" data-key="t-form-select">Thêm bình luận</a>
+                                <a href="{{route('admin.optionTrade.create')}}" class="nav-link" data-key="t-nestable-list">Thêm tùy chọn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#giatri" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarForms">
+                        <i class="ri-layout-grid-line"></i> <span data-key="t-forms">Quản lý giá trị đầu tư</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="giatri">
+                        <ul class="nav nav-sm flex-column">
+                            <li>Quản lý giá trị đầu tư</li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.valueTrade.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.valueTrade.create')}}" class="nav-link" data-key="t-nestable-list">Thêm giá trị</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#khoahoc" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarForms">
+                        <i class="ri-compasses-2-line"></i> <span data-key="t-forms">Quản lý Đăng ký khóa học</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="khoahoc">
+                        <ul class="nav nav-sm flex-column">
+                            <li>Quản lý khách hàng đăng ký khóa học</li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.registerCourse.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
                             </li>
                         </ul>
                     </div>

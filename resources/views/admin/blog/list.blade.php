@@ -30,6 +30,10 @@
                                                 <a href="{{route('admin.blog.create')}}" class="btn btn-success add-btn"><i
                                                         class="ri-add-line align-bottom me-1"></i> Thêm mới
                                                 </a>
+                                                <a href="{{route('admin.blog.trash')}}"
+                                                   class="btn btn-danger add-btn"
+                                                >Danh sách đã xóa
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-sm">
@@ -64,7 +68,7 @@
                                                     <td class="email">{{(\Illuminate\Support\Str::limit($blog->content,25,'...'))}}</td>
                                                     <td><img src="{{asset($blog->images)}}"
                                                              alt="{{asset($blog->images)}}"
-                                                             width="70%"></td>
+                                                             width="50%"></td>
                                                     <td class="customer_name">{{$blog->author}}</td>
                                                     <td class="customer_name">{{$blog->short_description}}</td>
                                                     <td>

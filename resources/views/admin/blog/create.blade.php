@@ -25,48 +25,72 @@
                                     </div>
                                 </div>
                             </div><!-- end card header -->
-                            <form action="" method="post">
+                            <form action="{{ route('admin.blog.create') }}" method="post" enctype="multipart/form-data">
+                                @csrf
                                 <div class="card-body">
                                     <div class="live-preview">
                                         <div class="row gy-4">
-                                            <div class="col-xxl-12 col-md-12">
+                                            <div class="col-xxl-9 col-md-12">
                                                 <div>
                                                     <label for="basiInput" class="form-label">Tên bài viết</label>
-                                                    <input type="text" name="name" class="form-control" id="basiInput">
+                                                    <input type="text" name="name" class="form-control" value="{{old('name')}}"
+                                                        id="basiInput">
                                                 </div>
+                                                @error('name')
+                                                    <h5 align="center" style="color: red">{{ $message }}</h5>
+                                                @enderror
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xxl-12 col-md-12">
+                                            <div class="col-xxl-9 col-md-12">
                                                 <div>
-                                                    <label for="exampleFormControlTextarea5" class="form-label">Nội dung</label>
-                                                    <textarea class="form-control" name="content" id="exampleFormControlTextarea5"
-                                                              rows="3"></textarea>
+                                                    <label for="exampleFormControlTextarea5" class="form-label">Nội
+                                                        dung</label>
+                                                    <textarea class="form-control" v name="content" id="exampleFormControlTextarea5" rows="3">{{old('content')}}</textarea>
                                                 </div>
+                                                @error('content')
+                                                    <h5 align="center" style="color: red">{{ $message }}</h5>
+                                                @enderror
                                             </div>
-                                            <div class="col-xxl-12 col-md-12">
+                                            <div class="col-xxl-9 col-md-12">
                                                 <div>
-                                                    <label for="exampleFormControlTextarea5" class="form-label">Mô tả ngắn</label>
-                                                    <input type="text" name="short_description" class="form-control" id="basiInput">
+                                                    <label for="exampleFormControlTextarea5" class="form-label">Mô tả
+                                                        ngắn</label>
+                                                    <input type="text" name="short_description" class="form-control" value="{{old('short_description')}}"
+                                                        id="basiInput">
                                                 </div>
+                                                @error('short_description')
+                                                    <h5 align="center" style="color: red">{{ $message }}</h5>
+                                                @enderror
                                             </div>
-                                            <div class="col-xxl-12 col-md-12">
+                                            <div class="col-xxl-9 col-md-12">
                                                 <div>
-                                                    <label for="exampleFormControlTextarea5" class="form-label">Tác giả</label>
-                                                    <input type="text" name="author" class="form-control" id="basiInput">
+                                                    <label for="exampleFormControlTextarea5" class="form-label">Tác
+                                                        giả</label>
+                                                    <input type="text" name="author" class="form-control" value="{{old('author')}}"
+                                                        id="basiInput">
                                                 </div>
+                                                @error('author')
+                                                    <h5 align="center" style="color: red" >{{ $message }}</h5>
+                                                @enderror
                                             </div>
 
-                                            <div class="col-xxl-12 col-md-12">
+                                            <div class="col-xxl-9 col-md-12">
                                                 <div>
-                                                    <label for="exampleFormControlTextarea5" class="form-label">Tác giả</label>
-                                                    <input type="text" name="author" class="form-control" id="basiInput">
+                                                    <label for="exampleFormControlTextarea5" class="form-label">Ảnh</label>
+                                                    <input type="file" name="images" class="form-control" value="{{old('images')}}"
+                                                        id="basiInput">
                                                 </div>
+                                                @error('images')
+                                                    <h5 align="center" style="color: red">{{ $message }}</h5>
+                                                @enderror
                                             </div>
                                             <!--end col-->
                                         </div>
                                         <!--end row-->
+
                                     </div>
                                 </div>
+                                <button class="btn btn-light w-100" id="reset-layout">Lưu</button>
                             </form>
                         </div>
                     </div>

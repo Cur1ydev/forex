@@ -45,4 +45,16 @@ class BlogRepository implements BlogInterface
     {
         return Blog::find($id)->delete();
     }
+    public function trash()
+    {
+        return Blog::onlyTrashed()->get();
+    }
+    public function onlyTrash($id)
+    {
+        return Blog::where('id', $id)->restore();
+    }
+    public function allTrash()
+    {
+        return Blog::onlyTrashed()->restore();
+    }
 }
