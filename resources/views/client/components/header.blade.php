@@ -49,10 +49,7 @@
                         </div>
                     @else
                         <div class="uk-navbar-item uk-visible@m in-optional-nav">
-
-                            <a href="{{route('login')}}" class="uk-button uk-button-text">{{__('Đăng nhập')}}<i
-                                    class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                            <a href="#" class="uk-button uk-button-primary">{{__('Đăng ký')}}<i
+                            <a href="/login" class="uk-button uk-button-primary">{{__('Đăng nhập')}}<i
                                     class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                         </div>
                     @endif

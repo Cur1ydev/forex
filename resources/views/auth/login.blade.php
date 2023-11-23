@@ -100,8 +100,8 @@
                                             class="fab fa-google uk-margin-small-right"></i>Google</a>
                                     {{--                                    <a class="uk-button uk-button-small uk-border-rounded uk-margin-small-left color-facebook" href="#"><i class="fab fa-facebook-f uk-margin-small-right"></i>Facebook</a>--}}
                                 </div>
-                                <span class="uk-text-small">{{__('Không có tài khoản?')}} <a
-                                        href="#">{{__('Đăng ký')}}</a></span>
+{{--                                <span class="uk-text-small">{{__('Không có tài khoản?')}} <a--}}
+{{--                                        href="#">{{__('Đăng ký')}}</a></span>--}}
                             </div>
                         </div>
                     </div>

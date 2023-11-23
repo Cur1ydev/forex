@@ -84,10 +84,10 @@
                         </form>
                     </div>
                     <div class="uk-width-3-5@m" align="center">
-                        <img src="{{asset('img/img-course.jpg')}}" alt="{{asset('img/img-course.jpg')}}" width="100%">
+                        <img src="{{asset('img/img-course.jpg')}}" alt="{{asset('img/img-course.jpg')}}" width="90%">
                         <h5>{{__('Giảng viên: Mr Đình Dũng')}}</h5>
                         <p>{{__('Theo dõi và tham gia cộng đồng học viên của giảng viên Đình Dũng ')}} <a
-                                href="https://t.me/dinhdungofficial" target="_blank">{{__('tại đây')}}</a></p>
+                                href="https://t.me/dinhdungchannel" target="_blank">{{__('tại đây')}}</a></p>
                     </div>
                 </div>
             </div>
