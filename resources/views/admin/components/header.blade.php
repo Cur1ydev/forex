@@ -216,7 +216,7 @@
     <!-- LOGO -->
     <div class="navbar-brand-box">
         <!-- Dark Logo-->
-        <a href="index-2.html" class="logo logo-dark">
+        <a href="/admin/" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{asset('images/logo-forex-nen-toi.png')}}" alt="" height="22">
                     </span>
@@ -225,7 +225,7 @@
                     </span>
         </a>
         <!-- Light Logo-->
-        <a href="index-2.html" class="logo logo-light">
+        <a href="/admin/" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{asset('images/logo-forex-nen-toi.png')}}" alt="" height="22">
                     </span>
