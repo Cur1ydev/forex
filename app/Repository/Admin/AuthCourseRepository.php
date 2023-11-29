@@ -39,7 +39,8 @@ class AuthCourseRepository implements AuthCourseInterface
 
     public function delete($id)
     {
-        return RegisterCourse::find($id)->delete();
+        $regist = RegisterCourse::query()->findOrFail($id);
+        return $regist?->delete();
     }
 
     public function trash()

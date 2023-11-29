@@ -19,19 +19,13 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title mb-0">Tất cả bài viết</h4>
+                                <h4 class="card-title mb-0">Tất cả</h4>
                             </div><!-- end card header -->
 
                             <div class="card-body">
                                 <div class="listjs-table" id="customerList">
                                     <div class="row g-4 mb-3">
                                         <div class="col-sm-auto">
-{{--                                            <div>--}}
-{{--                                                <a href="{{route('admin.registerCourse.trash')}}"--}}
-{{--                                                   class="btn btn-danger add-btn"--}}
-{{--                                                >Danh sách đã xóa--}}
-{{--                                                </a>--}}
-{{--                                            </div>--}}
                                         </div>
                                         <div class="col-sm">
                                             <div class="d-flex justify-content-sm-end">
@@ -50,34 +44,24 @@
                                                 <th class="sort" data-sort="customer_name">Tên khách hàng</th>
                                                 <th class="sort" data-sort="email">Số điện thoại</th>
                                                 <th class="sort" data-sort="phone">Email</th>
-                                                <th class="sort" data-sort="date">Tùy chọn giảng viên</th>
+                                                <th class="sort" data-sort="date">Nghề nghiệp</th>
+                                                <th class="sort" data-sort="date">Ghi chú</th>
                                                 <th class="sort" data-sort="action">Action</th>
 
                                             </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
-                                            @foreach($registerCourses as $registerCourse)
+                                            @foreach($regists as $regist)
                                                 <tr align="center">
-                                                    <td>{{$registerCourse->name}}</td>
-                                                    <td class="email">{{$registerCourse->phone_number}}</td>
-
-                                                    <td class="customer_name">{{$registerCourse->email}}</td>
-                                                    @php
-                                                        $option = json_decode($registerCourse->option,true);
-                                                    @endphp
-                                                    <td class="customer_name">
-                                                        @foreach($option as $key => $value)
-                                                        <ul>{{$key}}:
-                                                            <p>{{$value}}</p>
-                                                        </ul>
-                                                        @endforeach
-
-                                                    </td>
-
+                                                    <td>{{$regist->name}}</td>
+                                                    <td class="email">{{$regist->phone_number}}</td>
+                                                    <td class="customer_name">{{$regist->email}}</td>
+                                                    <td class="customer_name">{{$regist->job ?$regist->job : "không có" }}</td>
+                                                    <td class="customer_name">{{$regist->note ?$regist->note : "không có" }}</td>
                                                     <td>
                                                         <div class="d-flex gap-2">
                                                             <div class="remove">
-                                                                <a href="{{route('admin.registerCourse.delete',['id' => $registerCourse->id])}}"
+                                                                <a href="{{route('admin.regist.delete',['id' => $regist->id])}}"
                                                                    class="btn btn-sm btn-danger remove-item-btn"
                                                                 >Xóa
                                                                 </a>
@@ -90,24 +74,6 @@
                                             </tbody>
                                         </table>
                                     </div>
-
-{{--                                    <div class="d-flex justify-content-end">--}}
-{{--                                        <div class="pagination-wrap hstack gap-2">--}}
-{{--                                            <a class="page-item pagination-prev" href="{{$registerCourses->previousPageUrl()}}">--}}
-{{--                                                Previous--}}
-{{--                                            </a>--}}
-{{--                                            <ul class="pagination listjs-pagination mb-0">--}}
-{{--                                                @for($i=1;$i<=$registerCourses->lastPage();$i++)--}}
-{{--                                                    <li><a class="page-item pagination-next" href="?page={{$i}}">--}}
-{{--                                                            {{$i}}--}}
-{{--                                                        </a></li>--}}
-{{--                                                @endfor--}}
-{{--                                            </ul>--}}
-{{--                                            <a class="page-item pagination-next" href="{{$registerCourses->nextPageUrl()}}">--}}
-{{--                                                Next--}}
-{{--                                            </a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
                                 </div>
                             </div><!-- end card -->
                         </div>

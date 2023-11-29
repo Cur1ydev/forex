@@ -163,7 +163,12 @@ use App\Http\Controllers\Admin\AuthCourseController;
              ->name('onlyTrash');
          Route::get('/all-trash', [AuthCourseController::class, 'storeAllTrash'])
              ->name('allTrash');
-
+     });
+     Route::prefix('register')->name('regist.')->group(function () {
+         Route::get('/list', [\App\Http\Controllers\Admin\RegisterController::class, 'list'])
+             ->name('list');
+         Route::get('/delete', [\App\Http\Controllers\Admin\RegisterController::class, 'delete'])
+             ->name('delete');
      });
  });
 

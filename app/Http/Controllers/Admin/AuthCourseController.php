@@ -17,4 +17,14 @@ class AuthCourseController extends Controller
         $registerCourses  = $this->authCourse->list();
         return view('admin.registerCourse.list',compact('registerCourses'));
     }
+
+    public function delete(Request $request)
+    {
+        $authCourse = $this->authCourse->delete($request->id);
+        if ($authCourse) {
+            return redirect()->route('admin.registerCourse.list');
+        }else{
+            return redirect()->route('home');
+        }
+    }
 }

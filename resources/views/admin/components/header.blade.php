@@ -379,6 +379,20 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#dangky" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarForms">
+                        <i class="ri-compasses-2-line"></i> <span data-key="t-forms">Danh sách đăng ký</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="dangky">
+                        <ul class="nav nav-sm flex-column">
+                            <li>Danh sách đăng ký</li>
+                            <li class="nav-item">
+                                <a href="{{route('admin.regist.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
             </ul>
         </div>
