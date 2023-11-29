@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
                                     <div class="table-responsive table-card mt-3 mb-1">
-                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                        <table class="table align-middle table-nowrap text-center" id="customerTable">
                                             <thead class="table-light">
                                             <tr align="center">
                                                 <th class="sort" data-sort="customer_name">Tên khách hàng</th>
@@ -46,6 +46,7 @@
                                                 <th class="sort" data-sort="phone">Email</th>
                                                 <th class="sort" data-sort="date">Nghề nghiệp</th>
                                                 <th class="sort" data-sort="date">Ghi chú</th>
+                                                <th class="sort" data-sort="date">Tên miền</th>
                                                 <th class="sort" data-sort="action">Action</th>
 
                                             </tr>
@@ -58,9 +59,10 @@
                                                     <td class="customer_name">{{$regist->email}}</td>
                                                     <td class="customer_name">{{$regist->job ?$regist->job : "không có" }}</td>
                                                     <td class="customer_name">{{$regist->note ?$regist->note : "không có" }}</td>
+                                                    <td class="customer_name">{{$regist->domain_name}}</td>
                                                     <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="remove">
+                                                        <div class="d-flex gap-2 text-center">
+                                                            <div class="remove ">
                                                                 <a href="{{route('admin.regist.delete',['id' => $regist->id])}}"
                                                                    class="btn btn-sm btn-danger remove-item-btn"
                                                                 >Xóa

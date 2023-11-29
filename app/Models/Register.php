@@ -16,6 +16,6 @@ class Register extends Model
             'phone_number',
             'job',
             'note',
-
+            'domain_name'
         ];
 }

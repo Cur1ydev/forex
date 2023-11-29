@@ -165,7 +165,7 @@ use App\Http\Controllers\Admin\AuthCourseController;
              ->name('allTrash');
      });
      Route::prefix('register')->name('regist.')->group(function () {
-         Route::get('/list', [\App\Http\Controllers\Admin\RegisterController::class, 'list'])
+         Route::get('/list/{domain}', [\App\Http\Controllers\Admin\RegisterController::class, 'list'])
              ->name('list');
          Route::get('/delete', [\App\Http\Controllers\Admin\RegisterController::class, 'delete'])
              ->name('delete');

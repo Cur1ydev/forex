@@ -388,7 +388,9 @@
                         <ul class="nav nav-sm flex-column">
                             <li>Danh sách đăng ký</li>
                             <li class="nav-item">
-                                <a href="{{route('admin.regist.list')}}" class="nav-link" data-key="t-basic-elements">Danh sách</a>
+                                <a href="{{route('admin.regist.list',['domain' => 'quoctuantrading.com'])}}" class="nav-link" data-key="t-basic-elements">Quốc Tuấn </a>
+{{--                                <a href="{{route('admin.regist.list',['domain' => 'quoctuantrading.com'])}}" class="nav-link" data-key="t-basic-elements">David Phạm </a>--}}
+{{--                                <a href="{{route('admin.regist.list',['domain' => 'quoctuantrading.com'])}}" class="nav-link" data-key="t-basic-elements">Đình Dũng </a>--}}
                             </li>
                         </ul>
                     </div>
